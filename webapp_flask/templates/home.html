@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	{# Ici, on fait l’appel au `CSS` (pour avoir le style) #}
+    	{# Cet appel se fait à l'aide de la balise <link> où on y indique le path pour accéder à la feuille de style #}
+		<link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"
+    </head>
+    <body>
+        <h1>Server is running !</h1>
+        <h2>Indiquer votre nom ?</h2>
+        {# On crée un nouvel élément : "form" #}
+        {# On indique POST pour dire qu’on va s’en servir pour que l’utilisateur puisse fournir des informations. #}
+        <form action="." method="POST">
+        {# On indique aussi que ce qui sera saisi est considéré comme un string #}
+            <input type="text" name="text">
+        {# On précise aussi qu’il y a un bouton “OK” pour envoyer le formulaire #}
+            <button type="submit">OK</button>
+        </form>
+    </body>
+</html>

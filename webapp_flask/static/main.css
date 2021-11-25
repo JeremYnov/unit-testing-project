@@ -1,0 +1,7 @@
+/* Dans le css, on dit à quoi il doit ressembler le h1. On va lui donner une couleur verte et le centrer.*/
+h1 {
+  font-size: 2em;
+  color: blue;
+  text-align: center;
+}
+

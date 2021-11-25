@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"
+    </head>
+    <body>
+        {# Ici, on aura un `h1` (titre principal) où on affiche le message grâce aux {{ }} #}
+	    <h1> Bienvenue {{ message }} </h1>
+    </body>
+    {# La page est enrichie des éventuels liens pour accéder aux autres pages #}
+    <a href="{{ url_for('login') }}"> Cliquer pour se connecter en tant qu'admin </a>
+    <br/>
+    <a href="{{ url_for('home') }}"> Retourner à la page d'accueil </a>
+    {# `href` est une balise où on indique un lien pour se diriger vers la page souhaitée en cliquant dessus. 
+    Il faut donner le nom de la fonction définie pour la page (pas la route !). Dans l’exemple, on donne indique bien url_for('login') et non pas url_for('/login') #}
+</html>
